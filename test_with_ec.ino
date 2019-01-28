@@ -70,9 +70,7 @@ void setup() {
 }
 void loop(void) {
   
-  //pHValue = phfunction();
-  
-  pHValue = 6.56;
+  pHValue = phfunction();
  
 
 
@@ -269,29 +267,6 @@ lcd.print("Please Wait :-)");
  sendCommand("AT+CIPSEND=0," +String(getData1.length()+4),4,">");
  esp8266.println(getData1);delay(1000);countTrueCommand++;
  sendCommand("AT+CIPCLOSE=0",5,"OK");
-
-
- 
-/* String getData7 = "GET /update?api_key="+ API +"&"+ field7 +"="+String("11.08");
- sendCommand("AT+CIPMUX=1",5,"OK");
- sendCommand("AT+CIPSTART=0,\"TCP\",\""+ HOST +"\","+ PORT,15,"OK");
- sendCommand("AT+CIPSEND=0," +String(getData7.length()+4),4,">");
- esp8266.println(getData7);delay(1000);countTrueCommand++;
- sendCommand("AT+CIPCLOSE=0",5,"OK");
-
- String getData8 = "GET /update?api_key="+ API +"&"+ field8 +"="+String("76.98");
- sendCommand("AT+CIPMUX=1",5,"OK");
- sendCommand("AT+CIPSTART=0,\"TCP\",\""+ HOST +"\","+ PORT,15,"OK");
- sendCommand("AT+CIPSEND=0," +String(getData8.length()+4),4,">");
- esp8266.println(getData8);delay(1000);countTrueCommand++;
- sendCommand("AT+CIPCLOSE=0",5,"OK");*/
-
-
-
-
-
-
-
 
 }
 double avergearray(int* arr, int number){
